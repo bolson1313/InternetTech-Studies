@@ -1,0 +1,13 @@
+form{
+    text-align: center;
+}
+.inputForm, .submitButton{
+    max-width: 170px;
+    padding: 10px;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+
