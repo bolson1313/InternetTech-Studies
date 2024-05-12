@@ -1,0 +1,27 @@
+aktualna cena złota:
+GET	http://api.nbp.pl/api/cenyzlota
+status: 200
+
+ostatnich 7 notowań ceny złota:
+GET	https://api.nbp.pl/api/cenyzlota/last/7
+status: 200
+
+ostatnich -7 notowań ceny złota:
+GET	https://api.nbp.pl/api/cenyzlota/last/-7
+status: 404 NotFound
+
+ostatnich 256 notowań ceny złota:
+GET	https://api.nbp.pl/api/cenyzlota/last/256
+status: 400 BadRequest - Przekroczony limit 255 wyników / Maximum size of 255 data series has been exceeded
+
+cena złota z 2 maja 2024:
+GET	https://api.nbp.pl/api/cenyzlota/2024-05-02
+status: 200
+
+cena złota z 3 maja 2024:
+GET	https://api.nbp.pl/api/cenyzlota/2024-05-03
+status: 404 NotFound - Not Found - Brak danych
+
+cena złota z dostępnych dni pomiędzy 29 kwi. 2024 a 5 maja 2024:
+GET	https://api.nbp.pl/api/cenyzlota/2024-04-29/2024-05-05
+status: 200

@@ -1,0 +1,20 @@
+https://api.github.com/users
+status: 200
+
+https://api.github.com/users?since=2419599
+status: 200
+
+https://api.github.com/users/spetz
+status: 200
+
+https://api.github.com/users/spetz/hovercard
+status: 401 - unauthorized
+
+https://api.github.com/users/spetz/followers
+status: 200
+
+https://api.github.com/users/spetz/followers?per_page=5
+status: 200
+ 
+https://api.github.com/repos/spetz/tokenmanager-sample
+status: 200

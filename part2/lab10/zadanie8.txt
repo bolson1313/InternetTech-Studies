@@ -1,0 +1,56 @@
+https://api.github.com/gitignore/templates/Laravel
+{
+    "name": "Laravel",
+    "source": "/vendor/\nnode_modules/\nnpm-debug.log\nyarn-error.log\n\n# Laravel 4 specific\nbootstrap/compiled.php\napp/storage/\n\n# Laravel 5 & Lumen specific\npublic/storage\npublic/hot\n\n# Laravel 5 & Lumen specific with changed public path\npublic_html/storage\npublic_html/hot\n\nstorage/*.key\n.env\nHomestead.yaml\nHomestead.json\n/.vagrant\n.phpunit.result.cache\n"
+}
+
+https://api.github.com/repos/spetz/tokenmanager-sample
+status: 200
+
+https://api.github.com/repos/spetz/tokenmanager-sample/contents/README.md
+status: 200
+
+https://api.github.com/repos/spetz/tokenmanager-sample/contents/README.md?ref=master
+status: 200
+
+https://api.github.com/repos/passenger-stack/Passenger/contributors
+status: 200
+
+https://api.github.com/repos/passenger-stack/Passenger/collaborators/phuzarski
+status: 401 - unauthorized
+
+https://api.github.com/users/phuzarski/following/spetz
+status: 204 - no content
+
+https://api.github.com/users/spetz/following/phuzarski
+status: 404 - not found
+
+https://api.github.com/repos/passenger-stack/Passenger/zipball
+status: 200
+chyba śmiga
+
+https://api.github.com/repos/passenger-stack/Passenger/traffic/clones
+status: 403 - fortbidden
+{
+    "message": "Must have push access to repository",
+    "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-repository-clones"
+}
+
+https://api.github.com/repos/passenger-stack/Passenger/commits
+status: 200
+
+https://api.github.com/repos/passenger-stack/Passenger/commits/b1c3a8011e585eba20d85ba3cdbc9f5dbe29f345
+status: 200
+
+https://api.github.com/repos/passenger-stack/Passenger/branches
+status: 200
+
+https://api.github.com/repos/passenger-stack/Passenger/branches/master
+status: 200
+
+https://api.github.com/repos/passenger-stack/Passenger/branches/main
+status: 404 - not found
+{
+    "message": "Branch not found",
+    "documentation_url": "https://docs.github.com/rest/branches/branches#get-a-branch"
+}

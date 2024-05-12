@@ -1,0 +1,54 @@
+Uzyskanie informacji o sobie:
+GET	https://api.github.com/user
+"url": "https://api.github.com/users/bolson1313",
+"html_url": "https://github.com/bolson1313",
+status: 200
+
+Zaktualizowanie informacji o sobie:
+PATCH	https://api.github.com/user
+{
+    "bio": "Hello World!"
+}
+status: 200
+
+
+uzyskania informacji o swoich wszystkich repozytoriach:
+GET	https://api.github.com/user/repos
+status: 200
+
+uzyskania informacji o swoich prywatnych repozytoriach:
+GET	https://api.github.com/user/repos?type=private
+status: 200
+
+uzyskania informacji o swoich publicznych repozytoriach:
+GET	https://api.github.com/user/repos?type=public
+status: 200
+
+utworzenia nowego prywatnego repozytorium: 
+ – nazwa → ai1-test, 
+ – opis → This is AI1 Test repository!, 
+ – prywatne → tak. 
+POST	https://api.github.com/user/repos
+Body (JSON):
+{
+  "name": "ai1-test",
+  "description": "This is AI1 Test repository!",
+  "private": true
+}
+status: 201 - created
+
+przestawić (zaktualizować częściowo) przed chwilą utworzone repozytorium na publiczne:
+PATCH	https://api.github.com/repos/bolson1313/ai1-test
+Body(JSON):
+{
+  "private": false
+}
+status: 200
+
+usunąć całkiem to repozytorium:
+DELETE	https://api.github.com/repos/bolson1313/ai1-test
+status: 204 - no content
+
+spróbować jeszcze raz usunąć to repozytorium:
+DELETE	https://api.github.com/repos/bolson1313/ai1-test
+status: 404 - not found
